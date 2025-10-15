@@ -156,6 +156,66 @@ footer a:hover{color:#00A859;}
   </div>
 </section>
 
+
+  <!-- Integration Process Section -->
+<section id="integration" class="integration">
+  <h2 class="section-title">How Our Payment Integration Works</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Consultation & Planning</h3>
+      <p>We take the time to understand your business and recommend the best payment platforms tailored to your needs, ensuring smooth operations from the start.</p>
+      <div class="icon">
+        <img src="path/to/paypal-icon.png" alt="PayPal">
+      </div>
+    </div>
+    <div class="card">
+      <h3>Setup & Configuration</h3>
+      <p>We connect PayPal, Stripe, WiPay, Fygaro, and Merchant Bank accounts to your website securely, making sure every payment channel is ready for transactions.</p>
+      <div class="icon">
+        <img src="path/to/stripe-icon.png" alt="Stripe">
+      </div>
+    </div>
+    <div class="card">
+      <h3>Testing & Verification</h3>
+      <p>Before going live, we rigorously test all payment methods to guarantee seamless, error-free transactions for you and your customers.</p>
+      <div class="icon">
+        <img src="path/to/wipay-icon.png" alt="WiPay">
+      </div>
+    </div>
+    <div class="card">
+      <h3>Launch & Support</h3>
+      <p>Your online store goes live with full monitoring and support, including analytics review and troubleshooting to keep your payments flowing smoothly.</p>
+      <div class="icon">
+        <img src="path/to/fygaro-icon.png" alt="Fygaro">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Integration Process Styles */
+.integration {padding:6rem 2rem; max-width:1200px; margin:0 auto;}
+.integration .cards {display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;}
+.integration .card {background-color:#111; padding:2rem; border-radius:10px; flex:1 1 250px; transition:0.3s; opacity:0; transform:translateY(30px);}
+.integration .card:hover{transform:translateY(-10px); border:1px solid #00A859;}
+.integration .card.visible{opacity:1; transform:translateY(0);}
+.integration .icon {margin-top:1rem; display:flex; justify-content:center;}
+.integration .icon img {width:40px; height:40px; object-fit:contain;}
+@media (max-width:768px){.integration .cards{flex-direction:column; align-items:center;}}
+</style>
+
+<script>
+// Reveal animations for Integration cards
+const integrationCards = document.querySelectorAll('.integration .card');
+function revealIntegration(){const h=window.innerHeight;integrationCards.forEach(c=>{const top=c.getBoundingClientRect().top;if(top<h-100)c.classList.add('visible');});}
+window.addEventListener('scroll',revealIntegration); window.addEventListener('load',revealIntegration);
+</script>
+
+
+
+
+  
+
 <!-- Pricing -->
 <section id="pricing" class="pricing">
   <h2 class="section-title">Pricing</h2>
