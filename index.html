@@ -206,7 +206,7 @@ footer a:hover{color:#00A859;}
 <script>
 // Typing effect
 const typedText = document.querySelector(".typed-text");
-const phrases = ["Helping Businesses Go Digital & Get Paid Smoothly", "Payment Integration Made Simple with", " professional, reliable, and tailored solutions"];
+const phrases = ["Helping Businesses Go Digital & Get Paid Smoothly", "Payment Integration Made Simple with", " Professional, Reliable, and Tailored Solutions"];
 let i=0,j=0,currentPhrase=[],isDeleting=false,speed=100;
 function type(){if(i>=phrases.length)i=0; let fullText=phrases[i]; if(!isDeleting){currentPhrase.push(fullText[j]); typedText.textContent=currentPhrase.join(""); j++; if(j===fullText.length){isDeleting=true; setTimeout(type,1500); return;}}else{currentPhrase.pop(); typedText.textContent=currentPhrase.join(""); if(currentPhrase.length===0){isDeleting=false;j=0;i++;}} setTimeout(type,isDeleting?speed/2:speed);}
 type();
